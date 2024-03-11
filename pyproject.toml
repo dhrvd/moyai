@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "moyai"
+version = "0.1.0"
+description = "Yet another general purpose discord bot."
+authors = ["dhrvd <138230650+dhrvd@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
