@@ -8,6 +8,47 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
+discord-py = {extras = ["speed"], version = "^2.3.2"}
+jishaku = {git = "https://github.com/Gorialis/jishaku.git"}
+psutil = "^5.9.8"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.3.2"
+
+[tool.ruff]
+line-length = 125
+
+[tool.ruff.lint]
+select = [
+    "F",     # pyflakes
+    "E",     # pycodestyle errors
+    "W",     # pycodestyle warnings
+    "C90",   # mccabe
+    "I",     # isort
+    "N",     # pep8-naming
+    "UP",    # pyupgrade
+    "ANN",   # flake8-annotations
+    "ASYNC", # flake8-async
+    "C4",    # flake8-comprehensions
+    "ICN",   # flake8-import-conventions
+    "G",     # flake8-logging-format
+    "PIE",   # flake8-pie
+    "PYI",   # flake8-pyi
+    "Q",     # flake8-quotes
+    "RET",   # flake8-return
+    "SLF",   # flake8-self
+    "SIM",   # flake8-simplify
+    "TID",   # flake8-tidy-imports
+    "TCH",   # flake8-type-checking
+    "PTH",   # flake8-use-pathlib
+    "TRY",   # tryceratops
+    "PERF",  # perflint
+    "RUF",   # ruff-specific rules
+]
+ignore = [
+    "ANN101", # missing self type
+    "TRY003", # long exception messages
+]
 
 [build-system]
 requires = ["poetry-core"]
