@@ -40,7 +40,7 @@ class Bot(commands.Bot):
 
     def __init__(self) -> None:
         activity = discord.CustomActivity(name=config.STATUS)
-        allowed_mentions = discord.AllowedMentions(everyone=False, users=False, roles=True, replied_user=True)
+        allowed_mentions = discord.AllowedMentions(everyone=False, users=False, roles=True, replied_user=False)
         intents = discord.Intents.all()
 
         super().__init__(
